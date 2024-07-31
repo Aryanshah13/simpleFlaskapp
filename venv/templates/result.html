@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Asthma Care Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1, h2 {
+            color: #333333;
+            text-align: center;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #dddddd;
+            border-radius: 8px;
+        }
+        .result p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+        .result a {
+            color: #5bc0de;
+            text-decoration: none;
+        }
+        .result a:hover {
+            text-decoration: underline;
+        }
+        .result-list {
+            margin-left: 20px;
+            list-style-type: disc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Asthma Care Chatbot</h1>
+        
+        <div class="result">
+            <h2>Hello {{ name }}!</h2>
+            <p><strong>Gender:</strong> {{ gender }}</p>
+            <p><strong>Severity Prediction:</strong> Severe ({{ severity }})</p>
+            <p><strong>Recommendation:</strong></p>
+            <p>{{ recommendation | safe }}</p>
+        </div>
+    </div>
+</body>
+</html>
